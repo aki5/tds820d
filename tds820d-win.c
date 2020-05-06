@@ -102,19 +102,22 @@ main(int argc, char *argv[])
 						snprintf(epsName, 256, "%s-%d.eps", baseName, seq);
 						snprintf(pdfName, 256, "%s-%d.pdf", baseName, seq);
 						snprintf(pngName, 256, "%s-%d.png", baseName, seq);
-						FILE *epsFp = fopen(epsName, "rb");
+						FILE *epsFp;
+						fopen_s(&epsFp, epsName, "rb");
 						if(epsFp != NULL){
 							fprintf(stderr, "%s exists, skipping\n", epsName);
 							fclose(epsFp);
 							continue;
 						}
-						FILE *pdfFp = fopen(pdfName, "rb");
+						FILE *pdfFp;
+						fopen_s(&pdfFp, pdfName, "rb");
 						if(pdfFp != NULL){
 							fprintf(stderr, "%s exists, skipping\n", pdfName);
 							fclose(pdfFp);
 							continue;
 						}
-						FILE *pngFp = fopen(pngName, "rb");
+						FILE *pngFp;
+						fopen_s(&pngFp, pngName, "rb");
 						if(pngFp != NULL){
 							fprintf(stderr, "%s exists, skipping\n", pngName);
 							fclose(pngFp);
@@ -123,7 +126,8 @@ main(int argc, char *argv[])
 
 						break;
 					}
-					FILE *fp = fopen(epsName, "wb");
+					FILE *fp;
+					fopen_s(&fp, epsName, "wb");
 					if(fwrite(buf, 1, len, fp) == len){
 						fprintf(stderr, "received %s (%zu bytes)\n", epsName, len);
 					} else {
