@@ -48,11 +48,7 @@ intro2-1.eps and then convert it into intro2-1.pdf and intro2-1.png using ghosts
 2. adjust the knobs
 3. hit hardcopy
 
-## 25 MHz oscillator
-<img src="tst-6.svg" style="background-color:white;width:75%" />
 
-## 54MHz oscillator
-<img src="tst-12.svg" style="background-color:white;width:75%" />
-
-## PCIe 100 MHz differential pair with two probes
-<img src="tst-14.svg" style="background-color:white;width:75%" />
+54MHz oscillator|100MHz PCIe clock
+:-:|:-:
+<img src="tst-12.svg" style="background-color:white;" />|<img src="tst-14.svg" style="background-color:white;" />
