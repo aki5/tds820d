@@ -22,7 +22,8 @@ epsToPdf(char *epsName, char *pdfName)
 		return;
 	}
 	free(command);
-	//WaitForSingleObject(pi.hProcess, INFINITE);
+	CloseHandle(pi.hProcess);
+	CloseHandle(pi.hThread);
 }
 
 void
@@ -45,7 +46,8 @@ epsToPng(char *epsName, char *pngName)
 		return;
 	}
 	free(command);
-	//WaitForSingleObject(pi.hProcess, INFINITE);
+	CloseHandle(pi.hProcess);
+	CloseHandle(pi.hThread);
 }
 
 int
