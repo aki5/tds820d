@@ -7,21 +7,24 @@ Open up the hardcopy menu (shift-hardcopy on the front panel) to
 - set Hardcopy Format to EPS Color, and
 - set Hardcopy Port to RS-232
 
-<img src="intro-2.svg" style="background-color:white;width:40%" />
-<img src="intro-3.svg" style="background-color:white;width:40%" />
+Format|Port
+:-:|:-:
+<img src="intro-2.svg" style="background-color:white;" />|<img src="intro-3.svg" style="background-color:white;" />
 
 Next, open up the Utility menu (shift-display on the front panel)
-- click on bottom left button until I/O is highlighted, then
-- click on the button right to it until RS-232 is highlighted.
+- click on the System button until I/O is highlighted, then
+- click on the Port button until RS-232 is highlighted.
 
-<img src="intro-4.svg" style="background-color:white;width:40%" />
-<img src="intro-5.svg" style="background-color:white;width:40%" />
+System|Port
+:-:|:-:
+<img src="intro-4.svg" style="background-color:white;" />|<img src="intro-5.svg" style="background-color:white;" />
 
 - in Hardware Setup, set to 19200-N-1 with hardware flagging off, and
 - in Software Setup, set Soft Flagging off.
 
-<img src="intro-6.svg" style="background-color:white;width:40%" />
-<img src="intro-7.svg" style="background-color:white;width:40%" />
+Hardware Setup|Software Setup
+:-:|:-:
+<img src="intro-6.svg" style="background-color:white;" />|<img src="intro-7.svg" style="background-color:white;" />
 
 ## Running on Windows
 
