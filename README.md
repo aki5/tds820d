@@ -12,7 +12,7 @@ On the oscilloscope, open the hardcopy menu (shift-hardcopy on the front panel) 
 
 Format|Port
 :-:|:-:
-<img src="intro-2.svg" style="background-color:white;" />|<img src="intro-3.svg" style="background-color:white;" />
+<img src="figures/intro-2.svg" style="background-color:white;" />|<img src="figures/intro-3.svg" style="background-color:white;" />
 
 Next, open up the Utility menu (shift-display on the front panel)
 - click on the System button until I/O is highlighted, then
@@ -20,14 +20,14 @@ Next, open up the Utility menu (shift-display on the front panel)
 
 System|Port
 :-:|:-:
-<img src="intro-4.svg" style="background-color:white;" />|<img src="intro-5.svg" style="background-color:white;" />
+<img src="figures/intro-4.svg" style="background-color:white;" />|<img src="figures/intro-5.svg" style="background-color:white;" />
 
 - in Hardware Setup, set to 19200-N-1 with hardware flagging off, and
 - in Software Setup, set Soft Flagging off.
 
 Hardware Setup|Software Setup
 :-:|:-:
-<img src="intro-6.svg" style="background-color:white;" />|<img src="intro-7.svg" style="background-color:white;" />
+<img src="figures/intro-6.svg" style="background-color:white;" />|<img src="figures/intro-7.svg" style="background-color:white;" />
 
 ## Running on Windows
 
@@ -54,4 +54,4 @@ intro2-1.eps and then convert it into intro2-1.pdf and intro2-1.png using ghosts
 
 54MHz oscillator|100MHz PCIe clock
 :-:|:-:
-<img src="tst-12.svg" style="background-color:white;" />|<img src="tst-14.svg" style="background-color:white;" />
+<img src="figures/tst-12.svg" style="background-color:white;" />|<img src="figures/tst-14.svg" style="background-color:white;" />
