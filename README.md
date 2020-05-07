@@ -31,8 +31,9 @@ Hardware Setup|Software Setup
 
 ## Running on Windows
 
-A usb-serial adapter on windows typically shows up as com3 (some would write \\.\COM3). The second argument is basename for created files. This will receive
-intro2-1.eps and then convert it into intro2-1.pdf and intro2-1.png using ghostscript if available.
+A usb-serial adapter on windows typically shows up as com3 (some would write \\.\COM3). The second argument is basename for created files.
+
+When the hardcopy button is pressed, tds820d will receive intro2-1.eps and uses ghostscript (gswin64c.exe) to create corresponding .pdf and .png files from the eps.
 
     C:\Users\you\src\tds820d>tds820d-win.exe com3 intro2 
     ready
@@ -40,10 +41,12 @@ intro2-1.eps and then convert it into intro2-1.pdf and intro2-1.png using ghosts
     received intro2-1.eps (30740 bytes)
 
 ## Running on Linux
+
+The same as windows, except the serial port is /dev/ttyUSB0 instead of com3.
+
     you@pc:~/src/tds820d$ ./tds820d /dev/ttyUSB0 intro2
     started receiving hardcopy
     received intro2-1.eps (30740 bytes)
-
 
 # Raspberry Pi signals
 
