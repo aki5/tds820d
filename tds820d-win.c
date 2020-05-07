@@ -15,13 +15,14 @@ epsToPdf(char *epsName, char *pdfName)
 	STARTUPINFO si;
 	memset(&pi, 0, sizeof pi);
 	memset(&si, 0, sizeof si);
-	if(CreateProcess(NULL, command, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)){
+	BOOL ok = CreateProcess(NULL, command, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+	if(ok == FALSE){
 		fprintf(stderr, "createprocess did not work\n");
 		free(command);
 		return;
 	}
 	free(command);
-	WaitForSingleObject(pi.hProcess, INFINITE);
+	//WaitForSingleObject(pi.hProcess, INFINITE);
 }
 
 void
@@ -37,22 +38,22 @@ epsToPng(char *epsName, char *pngName)
 	STARTUPINFO si;
 	memset(&pi, 0, sizeof pi);
 	memset(&si, 0, sizeof si);
-	if(CreateProcess(NULL, command, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi)){
+	BOOL ok = CreateProcess(NULL, command, NULL, NULL, FALSE, 0, NULL, NULL, &si, &pi);
+	if(ok == FALSE){
 		fprintf(stderr, "createprocess did not work\n");
 		free(command);
 		return;
 	}
 	free(command);
-	WaitForSingleObject(pi.hProcess, INFINITE);
+	//WaitForSingleObject(pi.hProcess, INFINITE);
 }
 
 int
 main(int argc, char *argv[])
 {
 
-	char *tekName = argc > 2 ? argv[2] : "\\\\.\\COM3";
-	char *baseName = argc > 1 ? argv[1] : "tds820d-";
-
+	char *tekName = argc > 1 ? argv[1] : "\\\\.\\COM3";
+	char *baseName = argc > 2 ? argv[2] : "tds820d-";
 
 	for(;;){
 

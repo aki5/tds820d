@@ -1,25 +1,42 @@
 
-# tds820d 
+# TDS 820 and PC setup
 
-Connect your tektronix tds-820 to a Linux box with a null-modem
-and (probably) a usb-serial cable. In the utility menu, set hardcopy port to RS-232 and speed to 19200bps. Set output format to EPS in
-the hardcopy menu and run tds820d on the computer.
+First connect your Tektronix TDS 820 to a PC with a null-modem and a (usb-) serial cable.
 
-Pressing hardcopy on the scope will result in the screen being
-captured as eps,pdf and svg files on the computer.
+Open up the hardcopy menu (shift-hardcopy on the front panel) to
+- set Hardcopy Format to EPS Color, and
+- set Hardcopy Port to RS-232
 
-## Example session
+<img src="intro-2.svg" style="background-color:white;width:40%" />
+<img src="intro-3.svg" style="background-color:white;width:40%" />
 
-    aki@lapdell:~/src/tds820d$ ./tds820d /dev/ttyUSB0 tst
+Next, open up the Utility menu (shift-display on the front panel)
+- click on bottom left button until I/O is highlighted, then
+- click on the button right to it until RS-232 is highlighted.
+
+<img src="intro-4.svg" style="background-color:white;width:40%" />
+<img src="intro-5.svg" style="background-color:white;width:40%" />
+
+- in Hardware Setup, set to 19200-N-1 with hardware flagging off, and
+- in Software Setup, set Soft Flagging off.
+
+<img src="intro-6.svg" style="background-color:white;width:40%" />
+<img src="intro-7.svg" style="background-color:white;width:40%" />
+
+## Running on Windows
+
+A usb-serial adapter on windows typically shows up as com3 (some would write \\.\COM3). The second argument is basename for created files. This will receive
+intro2-1.eps and then convert it into intro2-1.pdf and intro2-1.png using ghostscript if available.
+
+    C:\Users\you\src\tds820d>tds820d-win.exe com3 intro2 
+    ready
     started receiving hardcopy
-    tst-1.eps exists
-    tst-2.eps exists
-    received tst-3.eps (17814 bytes)
+    received intro2-1.eps (30740 bytes)
+
+## Running on Linux
+    you@pc:~/src/tds820d$ ./tds820d /dev/ttyUSB0 intro2
     started receiving hardcopy
-    tst-3.eps exists
-    received tst-4.eps (34680 bytes)
-    started receiving hardcopy
-    tst-4.eps exists
+    received intro2-1.eps (30740 bytes)
 
 
 # Raspberry Pi signals
