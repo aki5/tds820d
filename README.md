@@ -1,9 +1,12 @@
 
 # TDS 820 and PC setup
 
-First connect your Tektronix TDS 820 to a PC with a null-modem and a (usb-) serial cable.
+To get automatic pdf and png conversion working, you need Ghostscript from
+https://www.ghostscript.com/download/gsdnld.html.
 
-Open up the hardcopy menu (shift-hardcopy on the front panel) to
+Then connect your Tektronix TDS 820 to a PC with a null-modem and a (usb-) serial cable.
+
+On the oscilloscope, open the hardcopy menu (shift-hardcopy on the front panel) to
 - set Hardcopy Format to EPS Color, and
 - set Hardcopy Port to RS-232
 
